@@ -40,16 +40,6 @@
     });
   }
 
-  /* Cinematic video: slow, epic playback */
-  var cine = document.querySelector("[data-cinematic]");
-  if (cine){
-    var slowMo = function(){ try { cine.playbackRate = 0.5; } catch(e){} };
-    cine.addEventListener("loadedmetadata", slowMo);
-    slowMo();
-    var tryPlay = function(){ var p = cine.play(); if (p && p.catch) p.catch(function(){}); };
-    tryPlay();
-  }
-
   /* Contact form: friendly mailto fallback (no backend) */
   var form = document.querySelector("[data-contact-form]");
   if (form){
