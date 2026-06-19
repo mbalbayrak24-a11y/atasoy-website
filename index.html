@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/styles.css?v=4" />
+<link rel="stylesheet" href="assets/styles.css?v=5" />
 </head>
 <body>
 <a class="skip-link" href="#main">Zum Inhalt springen</a>
@@ -71,8 +71,12 @@
   <!-- ÜBER UNS -->
   <section class="section bg-grad" id="ueber-uns">
     <div class="container split">
-      <div class="split__media" data-reveal>
-        <img src="images/dusche-detail.jpg" alt="Hochwertige schwarze Regendusche auf hellem Marmor — Badprojekt von Atasoy" style="object-position:50% 38%;" loading="lazy" decoding="async" />
+      <div class="split__media split__media--video" data-reveal>
+        <video class="split__video" data-cinematic autoplay muted loop playsinline preload="metadata"
+               poster="images/projekt-komplettbad.jpg" aria-label="Badprojekt von Atasoy – cineastische Aufnahme">
+          <source src="images/atasoy-bad.mp4" type="video/mp4" />
+        </video>
+        <span class="split__grade" aria-hidden="true"></span>
       </div>
       <div data-reveal>
         <p class="section__eyebrow">Über uns</p>
@@ -146,6 +150,6 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="assets/main.js?v=4"></script>
+<script src="assets/main.js?v=5"></script>
 </body>
 </html>

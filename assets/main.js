@@ -40,6 +40,16 @@
     });
   }
 
+  /* Cinematic video: slow, epic playback */
+  var cine = document.querySelector("[data-cinematic]");
+  if (cine){
+    var slowMo = function(){ try { cine.playbackRate = 0.5; } catch(e){} };
+    cine.addEventListener("loadedmetadata", slowMo);
+    slowMo();
+    var tryPlay = function(){ var p = cine.play(); if (p && p.catch) p.catch(function(){}); };
+    tryPlay();
+  }
+
   /* Contact form: friendly mailto fallback (no backend) */
   var form = document.querySelector("[data-contact-form]");
   if (form){
@@ -60,7 +70,7 @@
   function init(){
     if (!window.gsap || !window.ScrollTrigger){ revealFallback(); return; }
     gsap.registerPlugin(ScrollTrigger);
-    if (!prefersReduced && document.querySelector("[data-intro]")) buildIntro();
+    if (!prefersReduced && !isMobile && document.querySelector("[data-intro]")) buildIntro();
     buildReveals();
     window.addEventListener("load", function(){ ScrollTrigger.refresh(); });
   }
