@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Kontakt zu Atasoy Heilbronn — Gartenstraße 106, 74076 Heilbronn. Telefon 07131 405 78 87, atasoy.heizung@outlook.de. Beratung für Bad, Heizung & Solar." />
+<meta name="theme-color" content="#0c0c0e" />
+<title>Kontakt · Atasoy Heizung, Sanitär & Solartechnik</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css?v=4" />
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header class="nav" id="nav" data-nav data-nav-solid>
+  <div class="nav__inner">
+    <a class="nav__logo" href="index.html" aria-label="Atasoy Startseite">
+      <img src="images/atasoy-wordmark.png" alt="Atasoy – Heizung, Sanitär, Solartechnik" />
+    </a>
+    <nav class="nav__links" aria-label="Hauptnavigation">
+      <a href="ueber-uns.html">Über uns</a>
+      <a href="leistungen.html">Leistungen</a>
+      <a href="projekte.html">Projekte</a>
+      <a href="kontakt.html" aria-current="page">Kontakt</a>
+    </nav>
+    <a href="kontakt.html" class="btn btn--ghost nav__cta">Anfragen</a>
+    <button class="nav__burger" aria-label="Menü öffnen" aria-expanded="false" data-burger><span></span><span></span></button>
+  </div>
+  <div class="nav__mobile">
+    <a href="ueber-uns.html">Über uns</a><a href="leistungen.html">Leistungen</a>
+    <a href="projekte.html">Projekte</a><a href="kontakt.html">Kontakt</a>
+    <a href="kontakt.html" class="btn btn--solid">Anfragen</a>
+  </div>
+</header>
+
+<section class="page-hero" style="min-height:48vh;">
+  <div class="page-hero__img"><img src="images/shower-detail.jpg" alt="Hochwertiges Bad-Detail" fetchpriority="high" /></div>
+  <div class="page-hero__veil"></div>
+  <div class="page-hero__inner">
+    <p class="crumbs"><a href="index.html">Start</a> &nbsp;/&nbsp; Kontakt</p>
+    <p class="page-hero__eyebrow">Kontakt</p>
+    <h1 class="page-hero__title">Sprechen wir über<br />Ihr Projekt.</h1>
+    <p class="page-hero__lead">Persönlich, transparent und ohne Druck — wir freuen uns auf Ihre Anfrage.</p>
+  </div>
+</section>
+
+<main id="main">
+  <section class="section">
+    <div class="container contact-grid">
+      <!-- Info -->
+      <div class="info" data-reveal>
+        <div class="info__row">
+          <p class="info__label">Adresse</p>
+          <p class="info__value">Gartenstraße 106<br />74076 Heilbronn</p>
+        </div>
+        <div class="info__row">
+          <p class="info__label">Telefon</p>
+          <p class="info__value"><a href="tel:+4971314057887">07131 405 78 87</a></p>
+        </div>
+        <div class="info__row">
+          <p class="info__label">E-Mail</p>
+          <p class="info__value"><a href="mailto:atasoy.heizung@outlook.de">atasoy.heizung@outlook.de</a></p>
+        </div>
+        <div class="info__row">
+          <p class="info__label">Termine</p>
+          <p class="info__value">Nach Vereinbarung</p>
+          <p class="info__sub">Rufen Sie uns an oder schreiben Sie uns — wir finden einen passenden Termin.</p>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div data-reveal>
+        <form class="form" data-contact-form>
+          <div class="form__row">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required placeholder="Ihr Name" />
+            </div>
+            <div class="field">
+              <label for="telefon">Telefon</label>
+              <input id="telefon" name="telefon" type="tel" autocomplete="tel" placeholder="Für schnellen Rückruf" />
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="field">
+              <label for="email">E-Mail</label>
+              <input id="email" name="email" type="email" autocomplete="email" required placeholder="ihre@email.de" />
+            </div>
+            <div class="field">
+              <label for="thema">Thema</label>
+              <select id="thema" name="thema">
+                <option>Badsanierung</option>
+                <option>Heizung &amp; Sanitär</option>
+                <option>Heizungsmodernisierung</option>
+                <option>Solartechnik</option>
+                <option>Wartung &amp; Service</option>
+                <option>Reparatur / Notdienst</option>
+                <option>Sonstiges</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="nachricht">Ihre Nachricht</label>
+            <textarea id="nachricht" name="nachricht" placeholder="Beschreiben Sie kurz Ihr Vorhaben …" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--solid btn--lg">Anfrage senden</button>
+          <p class="form__note">Mit dem Absenden öffnet sich Ihr E-Mail-Programm mit der vorausgefüllten Anfrage an atasoy.heizung@outlook.de. Es werden keine Daten auf dieser Seite gespeichert.</p>
+        </form>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="map" data-reveal>
+        <img src="images/ph-karte.jpg" alt="Platzhalter — Kartenausschnitt Gartenstraße 106, Heilbronn" loading="lazy" />
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <div class="footer__brand"><img src="images/atasoy-logo.png" alt="Atasoy – Heizung, Sanitär, Solartechnik" /></div>
+        <p class="footer__desc">Heizung, Sanitär & Solartechnik aus Heilbronn. Präzises Handwerk für Bad, Wärme und Energie — Inh. Betül Atasoy.</p>
+        <div class="social" aria-label="Social Media">
+          <a href="https://www.instagram.com/atasoy.heizungsbau/" target="_blank" rel="noopener" aria-label="Instagram – atasoy.heizungsbau">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1.1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook (folgt)" title="Facebook – folgt">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7h2.3l.4-2.9h-2.7V9.2c0-.84.26-1.42 1.46-1.42h1.34V5.18c-.23-.03-1.03-.1-1.96-.1-1.94 0-3.27 1.18-3.27 3.36v1.66H8.5V14h2.27v7h2.73z"/></svg>
+          </a>
+          <a href="#" aria-label="WhatsApp (folgt)" title="WhatsApp – folgt">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.5 23.5l1.6-5.9A11.4 11.4 0 1 1 12 23.4a11.4 11.4 0 0 1-5.45-1.39L.5 23.5zM6.8 19.9l.35.2a9.5 9.5 0 0 0 4.84 1.33 9.46 9.46 0 1 0-8.02-4.43l.23.37-.95 3.48 3.54-.62z"/><path d="M9.4 6.9c-.22-.49-.45-.5-.66-.51h-.56c-.2 0-.51.07-.78.37-.27.3-1.02 1-1.02 2.43s1.05 2.82 1.2 3.02 2.06 3.3 5.05 4.5c2.49.98 3 .79 3.54.74.54-.05 1.74-.71 1.99-1.4.25-.69.25-1.28.17-1.4-.07-.12-.27-.2-.56-.34-.29-.14-1.74-.86-2.01-.96-.27-.1-.47-.15-.66.15-.2.29-.76.95-.93 1.15-.17.2-.34.22-.63.07s-1.24-.46-2.36-1.46c-.87-.78-1.46-1.74-1.63-2.03-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.51s-.66-1.58-.91-2.16z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer__col"><p class="footer__coltitle">Leistungen</p>
+        <a href="leistungen.html#badsanierung">Badsanierung</a><a href="leistungen.html#sanitaer">Heizung &amp; Sanitär</a>
+        <a href="leistungen.html#solar">Solartechnik</a><a href="leistungen.html#wartung">Wartung &amp; Service</a></div>
+      <div class="footer__col"><p class="footer__coltitle">Kontakt</p>
+        <p>Gartenstraße 106<br />74076 Heilbronn</p>
+        <a href="tel:+4971314057887">07131 405 78 87</a>
+        <a href="mailto:atasoy.heizung@outlook.de">atasoy.heizung@outlook.de</a></div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> Atasoy Heizung &amp; Sanitär &amp; Solartechnik · Inh. Betül Atasoy</span>
+      <span>Impressum · Datenschutz</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="assets/main.js?v=4"></script>
+</body>
+</html>
