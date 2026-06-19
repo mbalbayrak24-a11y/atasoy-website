@@ -60,7 +60,7 @@
   function init(){
     if (!window.gsap || !window.ScrollTrigger){ revealFallback(); return; }
     gsap.registerPlugin(ScrollTrigger);
-    if (!prefersReduced && !isMobile && document.querySelector("[data-intro]")) buildIntro();
+    /* Intro is now a pure-CSS auto crossfade on all viewports — no scroll-jack (buildIntro retired) */
     buildReveals();
     window.addEventListener("load", function(){ ScrollTrigger.refresh(); });
   }
