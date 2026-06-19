@@ -246,7 +246,7 @@ p{margin:0;} a{color:inherit;text-decoration:none;} ul,ol{margin:0;padding:0;lis
   .no-motion .intro__layer{animation:none;}
   .no-motion .intro__layer[data-layer="0"]{opacity:1;}
 }
-@keyframes introCycle{0%{opacity:0}4%{opacity:1}29%{opacity:1}34%{opacity:0}100%{opacity:0}}
+@keyframes introCycle{0%{opacity:0}5%{opacity:1}33%{opacity:1}38%{opacity:0}100%{opacity:0}}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto;}
   .intro__layer[data-layer="0"]{opacity:1!important;}

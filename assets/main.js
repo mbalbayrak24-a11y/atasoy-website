@@ -124,7 +124,7 @@
     tl.fromTo(scenes[2], { opacity:0, y:30, filter:"blur(6px)" }, { opacity:1, y:0, filter:"blur(0px)", duration:1.1, ease:"power2.out" }, 6.15);
     tl.to(layers[2], { scale:pushMid+0.06, duration:2.4, ease:EZ }, 6.0);
     tl.to(scenes[2], { opacity:0, y:-26, filter:"blur(6px)", duration:1, ease:"power2.in" }, 7.7);
-    tl.to([layers[2], ".intro__vignette"], { opacity:0, duration:1.1, ease:"power2.inOut" }, 7.9);
+    /* NB: 3rd image stays visible to the end — no fade-to-black after it */
   }
 
   function buildReveals(){
