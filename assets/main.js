@@ -38,20 +38,44 @@
     });
   }
 
-  /* Contact form: friendly mailto fallback (no backend) */
+  /* Contact form: Web3Forms (sends directly to info@atasoy-heizungsbau.de, no mail app needed) */
   var form = document.querySelector("[data-contact-form]");
   if (form){
+    var statusEl = form.querySelector("[data-form-status]");
+    var btn = form.querySelector("button[type=submit]");
+    var btnText = btn ? btn.textContent : "";
+    function setStatus(msg, ok){
+      if (!statusEl) return;
+      statusEl.hidden = false;
+      statusEl.textContent = msg;
+      statusEl.style.color = ok ? "var(--champagne, #c8a35b)" : "#e06a5a";
+    }
     form.addEventListener("submit", function(e){
       e.preventDefault();
-      var d = new FormData(form);
-      var subj = encodeURIComponent("Anfrage über atasoyheizung.de — " + (d.get("thema")||"Allgemein"));
-      var body = encodeURIComponent(
-        "Name: "+(d.get("name")||"")+"\n"+
-        "E-Mail: "+(d.get("email")||"")+"\n"+
-        "Telefon: "+(d.get("telefon")||"")+"\n"+
-        "Thema: "+(d.get("thema")||"")+"\n\n"+
-        (d.get("nachricht")||""));
-      window.location.href = "mailto:atasoy.heizung@outlook.de?subject="+subj+"&body="+body;
+      var data = new FormData(form);
+      data.set("subject", "Anfrage über atasoy-heizungsbau.de — " + (data.get("thema")||"Allgemein"));
+      if (btn){ btn.disabled = true; btn.textContent = "Wird gesendet …"; }
+      setStatus("Ihre Anfrage wird gesendet …", true);
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Accept": "application/json" },
+        body: data
+      })
+      .then(function(r){ return r.json(); })
+      .then(function(res){
+        if (res && res.success){
+          form.reset();
+          setStatus("Vielen Dank! Ihre Anfrage ist bei uns eingegangen – wir melden uns schnellstmöglich bei Ihnen.", true);
+        } else {
+          setStatus("Es gab ein Problem beim Senden. Bitte rufen Sie uns an: 07131 405 78 87.", false);
+        }
+      })
+      .catch(function(){
+        setStatus("Senden fehlgeschlagen. Bitte rufen Sie uns an: 07131 405 78 87 oder per E-Mail an info@atasoy-heizungsbau.de.", false);
+      })
+      .finally(function(){
+        if (btn){ btn.disabled = false; btn.textContent = btnText; }
+      });
     });
   }
 
